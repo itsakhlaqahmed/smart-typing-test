@@ -1,20 +1,53 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background: #2c2d2f;
+  color: #9d9c9c;
+}
+
+/* dlt */
+
+input {
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  background: none;
+  background-color: none;
+  box-shadow: none;
+  color: #9d9c9c;
+}
+
+
+input:focus {
+  outline: none !important;
+}
+/* _____________ */
 
 .container {
   box-sizing: border-box;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 200 70px;
+  width: 100%;
 }
 
 .words-wrapper {
   box-sizing: border-box;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70%;
 }
 
 .word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
+  /* text-align: center; */
 }
