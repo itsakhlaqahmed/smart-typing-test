@@ -1,9 +1,10 @@
 import React from "react";
 
-const Letter = ({letter}) => {
-    
+const Letter = ({letter, inputLetter}) => {
+    const color = inputLetter === letter ? '#fff' : 'red';
+    console.log(color)
     return (
-         <letter>{letter}</letter>
+         <letter style={{color: `${color}`}}>{letter}</letter>
             
     )
 }

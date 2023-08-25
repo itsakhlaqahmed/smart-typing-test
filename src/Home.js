@@ -6,21 +6,23 @@ import Input from "./components/Input";
 const Home = () => {
 
     const [text, setText] = useState("passing a callback to set the it breaksand it makes components".split(' '))
-    console.log(text)
+    const [input, setInput] = useState([]);
+    const [isActive, setIsActive] = useState(text.length-1);
+    // console.log(input)
     return(
         <div className="container">
 
-            <Input></Input>
+            <Input setInput={setInput}></Input>
+            <h1>Words</h1>
             <div className="words-wrapper">
                 <div className="words">
                     {
-                        // text.map((word) => {
-                        //     return <Word word={word} />
-                        // })
+                        text.map((word, index) => {
+                            return <Word key={index} word={word} input={input} isActive={index === isActive} />
+                        })
                     }
 
-                    <h1>Words</h1>
-                    <Word word={'abc'}/>
+                    
                     
                 </div>
             </div>
