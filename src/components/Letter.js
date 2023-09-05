@@ -1,10 +1,10 @@
 import React from "react";
 
-const Letter = ({letter, inputLetter}) => {
-    const color = inputLetter === letter ? '#fff' : 'red';
+const Letter = ({letter, inputLetter, setCaretX}) => {
+    const color = inputLetter === letter ? '#fff' : 'grey';
     // console.log(color)
     return (
-         <letter style={{color: `${color}`}}>{letter}</letter>
+         <div onClick={e => setCaretX(e.screenX)} style={{color: `${color}`}}>{letter}</div>
             
     )
 }
